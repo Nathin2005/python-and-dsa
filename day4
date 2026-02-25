@@ -1,0 +1,25 @@
+#  Anagram Program
+
+a = input("Enter first word: ")
+b = input("Enter second word: ")
+if sorted(a) == sorted(b):
+    print("Anagram")
+else:
+    print("Not Anagram")
+
+# Climbing Stairs 
+
+n = int(input("Enter number of steps: "))
+if n == 1:
+    print(1)
+elif n == 2:
+    print(2)
+else:
+    a = 1  
+    b = 2  
+    for i in range(3, n + 1):
+        c = a + b
+        a = b
+        b = c
+    
+    print("Number of ways:", b)

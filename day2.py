@@ -160,10 +160,10 @@
 #     print(number, "x", i, "=", result)
 
 
-total_seats = 10
-seat_number = 1  
-while seat_number <= total_seats:
-    name = input("Enter passenger name: ")
-    print("Seat", seat_number, "booked for", name)
-    seat_number += 1 
-print("All seats are booked!")       
+# total_seats = 10
+# seat_number = 1  
+# while seat_number <= total_seats:
+#     name = input("Enter passenger name: ")
+#     print("Seat", seat_number, "booked for", name)
+#     seat_number += 1 
+# print("All seats are booked!")       

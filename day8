@@ -1,0 +1,152 @@
+from pickle import POP
+
+
+print("OUTPUT FOR THE ABOVE PROGRAM")
+
+print("Pizza Categories")
+print("1. Normal")
+print("2. Delux")
+Categories = int(input("Enter your Choice [1 or 2]: "))
+
+print("Pizza Types")
+print("1. Veg")
+print("2. Non Veg")
+ptype = int(input("Enter your Choice [1 or 2]: "))
+
+cheese = int(input("Enter Cheese? [1.Yes or 2.NO]: "))
+topping = int(input("Enter Topping? [1.Yes or 2.NO]: "))
+
+water = int(input ("Do you want water Bottles ? [1.Yes or 2.NO]:"))
+water_qty=0
+if water == 1:
+    water_qty = int(input("How many bottles?:"))
+    
+ketchup = int (input("Do you want Ketchup ? [1.Yes or 2.NO]:"))
+ketchup_qty = 0
+if ketchup == 1:
+    ketchup_qty = int (input("HoW many packets ? :"))
+    
+softdrink = int(input("Do you want Soft Drinks? [1.Yes or 2.NO]: "))
+softdrink_qty = 0
+if softdrink == 1:
+    softdrink_qty = int(input("How many Cans?: "))
+    
+takeaway=int(input("Is it Take Away?[1.Yes or 2.NO]:"))
+
+
+if Categories == 1:  
+    if ptype == 1:
+        base_price = 300
+    else:
+        base_price = 400
+
+elif Categories == 2: 
+    if ptype == 1:
+        base_price = 600
+    else:
+        base_price = 800
+
+if cheese == 1:
+    extra_cheese = 100
+else:
+    extra_cheese = 0
+
+if topping == 1:
+    extra_topping = 100
+else:
+    extra_topping = 0
+
+water_cost = water_qty * 20
+ketchup_cost = ketchup_qty * 5
+softdrink_cost = softdrink_qty * 75
+
+if takeaway == 1:
+    takeaway_charge = 20
+else:
+    takeaway_charge = 0
+total_cost = (base_price + extra_cheese + extra_topping +
+              water_cost + ketchup_cost + softdrink_cost +
+              takeaway_charge)
+
+gst = total_cost * 0.18
+net_amount = total_cost + gst
+
+print("-------------------------------")
+print("** Pizza Bill Generator **")
+print("-------------------------------")
+print("Base Price       =", float(base_price))
+print("Extra Cheese     =", float(extra_cheese))
+print("Extra Toppings   =", float(extra_topping))
+print("Water Bottle     =", float(water_cost))
+print("Ketchup Packets  =", float(ketchup_cost))
+print("Soft Drinks      =", float(softdrink_cost))
+print("Take Away Charges=", float(takeaway_charge))
+print("-------------------------------")
+print("Total Cost       =", float(total_cost))
+print("GST Charges      =", round(gst, 1))
+print("-------------------------------")
+print("Net Amount Payable =", round(net_amount, 1))
+
+
+# OPERATIONS
+# 1. CRUD OPERATION
+# 2. STACK OPERATION
+# 3. QUEUE OPERATION
+# 4. DATA STRUCTURE TYPES
+
+# 1. CRUD OPERATION
+# CRUD OPERATION STANDS FOR CREATE, READ, UPDATE AND DELETE.
+# 1. CREATE - IT IS USED TO CREATE A NEW RECORD IN THE DATABASE.
+# 2. READ - IT IS USED TO READ THE RECORDS FROM THE DATABASE.
+# 3. UPDATE - IT IS USED TO UPDATE THE RECORDS IN THE DATABASE.
+# 4. DELETE - IT IS USED TO DELETE THE RECORDS FROM THE DATABASE.
+
+# 2. STACK OPERATION
+# STACK OPERATION IS A LIFO (LAST IN FIRST OUT) DATA STRUCTURE.
+# 1. PUSH - IT IS USED TO ADD AN ELEMENT TO THE TOP OF THE STACK.
+# 2. POP - IT IS USED TO REMOVE AN ELEMENT FROM THE TOP OF THE STACK.
+# 3. PEEK - IT IS USED TO GET THE TOP ELEMENT OF THE STACK WITHOUT REMOVING IT.
+# 4. IS EMPTY - IT IS USED TO CHECK WHETHER THE STACK IS EMPTY OR NOT.
+# 5. SIZE - IT IS USED TO GET THE NUMBER OF ELEMENTS IN THE STACK.
+
+# 3. QUEUE OPERATION
+# QUEUE OPERATION IS A FIFO (FIRST IN FIRST OUT) DATA STRUCTURE.
+# 1. ENQUEUE - IT IS USED TO ADD AN ELEMENT TO THE END OF THE QUEUE.
+# 2. DEQUEUE - IT IS USED TO REMOVE AN ELEMENT FROM THE FRONT OF THE QUEUE
+# 3. PEEK - IT IS USED TO GET THE FRONT ELEMENT OF THE QUEUE WITHOUT REMOVING IT.
+# 4. IS EMPTY - IT IS USED TO CHECK WHETHER THE QUEUE IS EMPTY OR NOT.
+# 5. SIZE - IT IS USED TO GET THE NUMBER OF ELEMENTS IN THE QUEUE.
+
+# 1. PUSH
+
+# 4. DATA STRUCTURE TYPES
+# 1. LINEAR DATA STRUCTURE
+# - THEY ARE IN SEQUENTIAL ORDER
+# - THEY ARE NOT CONNECTED TO EACH OTHER
+# 1. List
+# 2. Tuple
+# 3. set
+# 2. NON-LINEAR DATA STRUCTURE
+# - THEY ARE NOT IN SEQUENTIAL ORDER
+# - THERE IS A RELATIONSHIP BETWEEN THE ELEMENTS
+# - THEY ARE CONNECTED TO EACH OTHER
+# 1. Array
+# 2. Linked List
+# 3. Tree
+# 4. Graph
+# 3. HASH DATA STRUCTURE - KEY BASED DATA STRUCTURE
+# 1. Dictionary
+
+# #PSUEC0DE
+# POP()
+# if (stack is empty)
+
+# else 
+# top --
+# stack(arr(top++))<data
+
+# peek  ()
+# if stack is empty
+# print stack underflow
+# else 
+# return arr[top]

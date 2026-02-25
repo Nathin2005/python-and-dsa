@@ -1,0 +1,138 @@
+# FIBONACCI SERIES
+
+# n = int(input("enter the number:"))                                                           
+# a, b = 0, 1
+# for i in range( n):
+#     print(a)
+#     a, b = b, a+b
+    
+# TRBONACCI SERIES
+
+# n = int(input("enter the number:"))
+# a, b , c= 0, 1, 1
+# for i in range( n):
+#     print(a)
+#     a, b, c = b,c, a+b+c
+
+# LIST
+
+# list indices
+# list slicing
+# list methods
+# list operation
+# map,filter,reduce
+
+# list=[1,2,3,4,5,6]
+# print(list[4])
+# list slicing makes a new data
+# syntax [start index(included): end index(excluded)]
+# print(list[1:4])
+
+# list operator
+# 1)concatenation operator(+) - realtime usage :
+# a=[1,2,3]
+# b=[4,5]
+# print(a+b)
+# 2)repetition operator(*)
+# num =[1,2]
+# print(num*3)
+# 3)membership operator(in.not-in)--> return bool value 
+# fruits=["apple","banana","citrus"]
+# print("apple" in fruits)
+# print ("grapes" in fruits)
+# 4)comparision operator
+# list1=[1,2,3]
+# list2=[1,2,4]
+# print (list1==list2)
+# print(list1<list2)
+
+# a=[1,2,3,4,5]
+# b=[1,5,7,3,2]
+# print ("a list :",a,"b list :",b)
+# print("a list index of 4 is: ",a[4])
+# print("b list slicing of [0:4]:",b[0:4])
+# print("concatenation operator of  a and b :",a+b)
+# print("repetition operator:",a*2)
+# print("membership operator:",6 in b)
+# print("comparision operator:", a==b , a<b)
+
+# list method
+# 1)append()-element will be merge at last
+# num=[1,2,3]
+# num.append(4)
+# print (num)
+# 2)insert()--> insert an item at specific position
+# syntax=insert(index,item)
+# num.insert(2,5)
+# print(num)
+# 3)extend --> extend list of value 
+# a=[1,2]
+# b=[3,4]
+# a.extend(b)
+# print(a)
+# 4)remove --> remove specific element 
+# num=[1,2,3,4]
+# num.remove(2)
+# print(num)
+# 5)pop --> remove index value
+# num=[10,20,30]
+# num.pop(1)
+# print(num)
+# 6)clear --> remove all element 
+# num.clear()
+# print(num)
+# 7)index -->return index
+# num=[1,2,3,4,2,5,6,2]
+# print(num.index(2))
+# 8)count -->array element of count
+# print(num.count(2))
+# 9)sort 
+# print(num.sort(),num)
+# print(num.sort(reverse=True),num)
+## 10)copy 
+# b=num.copy()
+# print(b)
+
+# map,filter, and list --> functional programming -->iterates
+
+# should use it on list 
+# num = [1,2,3,4]
+# result=list(map(lambda x:x*2,num))   #  --> here x is a tempary variable act 
+# print(result)
+
+# def func(x):
+#     return x*2
+# result=list(map(func,num))
+# print(result)
+
+# num =[1,2,3,4,5,6,7,8,9,0]
+# result = list (filter(lambda x:x%2==0,num))
+# print(result)
+
+
+# def func(x):
+#     return x%2==0
+# result=list(filter(func,num))
+# print(result)
+
+# reduce --> decrease the value (func,iterable)
+
+# from functools import reduce
+# num=[1,2,3,4,5,6]
+# result=reduce(lambda a ,b: a+b,num )
+# print(result)
+
+from functools import reduce
+num = [1,2,3,4,5,6,7,8,9,10]
+even = list (filter(lambda x:x%2==0,num))
+result=reduce(lambda x ,y: x+y,even)
+print(even)
+print(result)
+
+from functools import reduce
+num = [1,2,3,4,5,6,7,8,9,10]
+odd = list (filter(lambda x:x%2==1,num))
+result=reduce(lambda x ,y: x+y,odd)
+print(odd)
+print(result)
+
